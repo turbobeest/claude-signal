@@ -30,6 +30,10 @@ echo "Installing claude-notify to ${INSTALL_DIR}..."
 mkdir -p "$INSTALL_DIR"
 cp "${SCRIPT_DIR}/claude-notify.sh" "${INSTALL_DIR}/claude-notify"
 chmod +x "${INSTALL_DIR}/claude-notify"
+if [[ ":$PATH:" != *":${INSTALL_DIR}:"* ]]; then
+    echo "  WARNING: ${INSTALL_DIR} is not in PATH."
+    echo "  Add to ~/.bashrc or ~/.profile:  export PATH=\"${INSTALL_DIR}:\$PATH\""
+fi
 echo "  Installed."
 
 # --- Create config ---
