@@ -1,0 +1,19 @@
+services:
+  signal-cli-rest-api:
+    image: bbernhard/signal-cli-rest-api:latest
+    container_name: signal-cli-rest-api
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:8080:8080"
+    environment:
+      - MODE=normal
+    volumes:
+      - signal-cli-data:/home/.local/share/signal-cli
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  signal-cli-data:

@@ -1,0 +1,37 @@
+# claude-notify configuration
+# Copy to ~/.config/claude-notify/config and edit with real values.
+# chmod 600 ~/.config/claude-notify/config
+
+# Signal API endpoint
+# Pi (localhost):    http://localhost:8080
+# Mac (via Tailscale): http://claudecode:8080
+SIGNAL_API_URL="http://localhost:8080"
+
+# Google Voice number registered with Signal (E.164 format)
+SIGNAL_SENDER="+1XXXXXXXXXX"
+
+# Your phone number to receive notifications (E.164 format)
+SIGNAL_RECIPIENT="+1XXXXXXXXXX"
+
+# Message verbosity: simple | normal | rich
+VERBOSITY="normal"
+
+# Comma-separated list of events to notify on
+# Available: Stop, Notification, TaskCompleted, SessionEnd
+NOTIFY_EVENTS="Stop,Notification,TaskCompleted,SessionEnd"
+
+# Curl timeout in seconds
+CURL_TIMEOUT=5
+
+# Label prepended to messages to identify source machine
+HOSTNAME_LABEL="mac"
+
+# --- Plan usage (live from Anthropic API) ---
+# Each notification appends real-time usage: session %, weekly %, per-model %.
+# Reads the OAuth token Claude Code stores locally:
+#   macOS: Keychain ("Claude Code-credentials")
+#   Linux: ~/.config/claude-code/auth.json (or ~/.claude/.credentials.json)
+# If no token is found, usage is silently omitted.
+# KEYCHAIN_SERVICE="Claude Code-credentials"
+# KEYCHAIN_ACCOUNT="terbeest"
+# AUTH_JSON="${HOME}/.config/claude-code/auth.json"

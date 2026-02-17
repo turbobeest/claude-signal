@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "claude-notify",
+        "async": true,
+        "timeout": 10
+      }
+    ],
+    "Notification": [
+      {
+        "type": "command",
+        "command": "claude-notify",
+        "async": true,
+        "timeout": 10
+      }
+    ],
+    "TaskCompleted": [
+      {
+        "type": "command",
+        "command": "claude-notify",
+        "async": true,
+        "timeout": 10
+      }
+    ],
+    "SessionEnd": [
+      {
+        "type": "command",
+        "command": "claude-notify",
+        "async": true,
+        "timeout": 10
+      }
+    ]
+  }
+}
