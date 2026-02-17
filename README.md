@@ -1,5 +1,8 @@
 # claude-signal
 
+<img width="1024" height="962" alt="image" src="https://github.com/user-attachments/assets/6f8b6941-4722-4dc6-bf47-2dd67271b734" />
+
+
 Signal notifications for Claude Code. Get a text on your phone every time Claude Code finishes a task, completes a session, or sends a notification -- with live plan usage included.
 
 ```
